@@ -1,0 +1,41 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-sans);
+}
+
+.scrollbar-thin {
+  scrollbar-width: thin;
+  scrollbar-color: #c7cfe2 transparent;
+}
+.scrollbar-thin::-webkit-scrollbar {
+  height: 8px;
+  width: 8px;
+}
+.scrollbar-thin::-webkit-scrollbar-thumb {
+  background: #c7cfe2;
+  border-radius: 999px;
+}
+
+/* Tailwind v4 doesn't ship h-4.5 by default for arbitrary icons in some setups */
+.h-4\.5 {
+  height: 1.125rem;
+}
+.w-4\.5 {
+  width: 1.125rem;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+  cursor: pointer;
+  opacity: 0.6;
+}
